@@ -92,3 +92,10 @@ with ```children``` is child of element:
        This line is a children
     </Child-app>
 ```
+
+- ```this.stage```: dùng bên trong của 1 component cụ thể, và chỉ có giá trị trong component đó.
+. Khai báo stage trong constructor.
+  
+- ```this.hàm mà hứng output từ component khác phải được bind(this) hoặc  khai báo hàm đó bằng arrow function```
+
+
