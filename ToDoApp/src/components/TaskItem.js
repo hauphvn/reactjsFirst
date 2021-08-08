@@ -1,12 +1,14 @@
 import { Component } from "react";
 class TaskItem extends Component {
   render() {
+      const {name, no, status} = this.props;
     return (
         <tr>
-          <th scope={"row"}>1</th>
-          <td>Học React JS</td>
+          <th scope={"row"}>{no}</th>
+          <td>{name}</td>
           <td>
-            <div className={"badge bg-danger text-wrap"}>Kích hoạt</div>
+
+            <div className={status ? "badge bg-danger text-wrap" : "badge bg-info text-wrap"}>{status ? "Kích hoạt" : "Ẩn"}</div>
           </td>
           <td>
             <div

@@ -1,4 +1,4 @@
-@import "~bootstrap/dist/css/bootstrap.css";
+/*@import "~bootstrap/dist/css/bootstrap.css";*/
 .App {
   text-align: center;
 }
@@ -41,4 +41,8 @@
 .btn-between{
   display: flex;
   justify-content: space-around;
+}
+
+#idTaskForm input[type=text]{
+  width: 100%;
 }

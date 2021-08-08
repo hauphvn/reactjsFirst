@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="11e50bcc-cc8c-4ee0-90f6-7e7a6b74ddcf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../ToDoApp/public/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ToDoApp/public/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ToDoApp/public/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ToDoApp/public/jquery-3.6.0.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ToDoApp/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoApp/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ToDoApp/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoApp/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ToDoApp/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoApp/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ToDoApp/src/components/Control.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoApp/src/components/Control.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ToDoApp/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoApp/src/components/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ToDoApp/src/components/Sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoApp/src/components/Sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ToDoApp/src/components/TaskForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoApp/src/components/TaskForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ToDoApp/src/components/TaskItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoApp/src/components/TaskItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ToDoApp/src/components/TaskList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ToDoApp/src/components/TaskList.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1wQYSv39t0wx5Ne7nJ8BnINTwPk" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11e50bcc-cc8c-4ee0-90f6-7e7a6b74ddcf" name="Default Changelist" comment="" />
+      <created>1628392283129</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628392283129</updated>
+      <workItem from="1628392284289" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -6,8 +6,8 @@ class Control extends Component {
   render() {
     return (
       <div className="row mt-2">
-        <Sort />
         <Search />
+        <Sort />
       </div>
     );
   }
