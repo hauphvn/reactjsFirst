@@ -14,7 +14,7 @@ class App extends Component {
           name: "Angular",
           status: true,
         },
-      ],
+      ]
     };
   }
 
@@ -34,6 +34,7 @@ class App extends Component {
 
   saveLocal(data) {
     const sizeList = this.state.tasks.length;
+    console.log(data);
     if (sizeList > 0) {
       const objNewTask = {
         id: sizeList + 1,
@@ -43,15 +44,18 @@ class App extends Component {
       this.state.tasks.push(objNewTask);
       this.setState({
         tasks: this.state.tasks
-      })
-      localStorage.setItem('tasks', JSON.stringify(this.state.tasks));
-    } else {
-      this.state.tasks.push({
-        id: 1,
-        name: data.txtJobName,
-        status: (data.selectStatus === 1) ? true : false,
       });
       localStorage.setItem('tasks', JSON.stringify(this.state.tasks));
+    } else {
+      const tasks =  [{
+        id: 1,
+        name: data.txtJobName,
+        status: (data.selectStatus === 'true') ? true : false,
+      }]
+      this.setState({
+        tasks: tasks
+      });
+      localStorage.setItem('tasks', JSON.stringify(tasks));
     }
   }
 

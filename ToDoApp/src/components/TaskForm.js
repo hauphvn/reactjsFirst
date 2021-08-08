@@ -1,4 +1,5 @@
-import { Component } from "react";
+import {Component} from "react";
+
 class TaskForm extends Component {
   constructor(){
     super();
@@ -15,10 +16,18 @@ class TaskForm extends Component {
         {[name]: value}
     );
   }
+  onReset = () =>{
+    console.log("----");
+    this.setState({
+      txtJobName: '',
+      selectStatus: true
+    });
+  }
   onSaveNewTask = (event) =>{
     event.preventDefault();
     this.props.outHandleSave(this.state);
 
+    this.onReset();
     // const tasks = localStorage.getItem('tasks');
     // const newTask = {
     //   id: (tasks) ? tasks.length + 1 : 0,
@@ -41,6 +50,7 @@ class TaskForm extends Component {
                 <input
                     type="text"
                     id={"idNameJob"}
+                    value={this.state.txtJobName}
                     onChange={this.onHandleChangeForm}
                     name='txtJobName' /> <br />
                 <label htmlFor="idSelectStatus" className={"mt-2"}>
@@ -48,9 +58,10 @@ class TaskForm extends Component {
                 </label>
                 <select
                     onChange={this.onHandleChangeForm}
-                  className={"form-control"}
-                  name="selectStatus"
-                  id="idSelectStatus"
+                    className={"form-control"}
+                    name="selectStatus"
+                    id="idSelectStatus"
+                    value={this.state.selectStatus}
                 >
                   <option value={'true'}>Kích hoạt</option>
                   <option value={'false'}>Ẩn</option>
@@ -62,7 +73,10 @@ class TaskForm extends Component {
                     onClick={this.onSaveNewTask}
                     className={'btn btn-success'}
                 >Lưu</button>
-                <button className={'btn btn-danger'}>Hủy</button>
+                <button
+                    onClick={this.onReset}
+                    className={'btn btn-danger'}
+                >Hủy</button>
               </div>
 
             </form>
