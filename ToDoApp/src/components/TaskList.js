@@ -1,13 +1,18 @@
 import { Component } from "react";
 import TaskItem from "./TaskItem";
 class TaskList extends Component {
+  onUpdateStatusItem = (event) =>{
+    this.props.outIdTaskItem(event);
+  }
   render() {
     let { tasks } = this.props;
     let listItems = [];
     if(tasks){
       listItems = tasks.map((item, index) => {
           return <TaskItem
+              id = {item.id}
               key = {index}
+              outStatusTaskItem = {this.onUpdateStatusItem}
               status = {item.status}
               no={index + 1}
               name={item.name} />;

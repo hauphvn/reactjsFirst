@@ -46,3 +46,8 @@
 #idTaskForm input[type=text]{
   width: 100%;
 }
+
+.btn-status-item{
+  cursor: pointer;
+  width: 100px;
+}

@@ -34,7 +34,6 @@ class App extends Component {
 
   saveLocal(data) {
     const sizeList = this.state.tasks.length;
-    console.log(data);
     if (sizeList > 0) {
       const objNewTask = {
         id: sizeList + 1,
@@ -60,11 +59,22 @@ class App extends Component {
   }
 
   onHandleSave = (event) => {
-    if(event.selectStatus === true){
+    if (event.selectStatus === true) {
       event.selectStatus = 'true';
     }
     this.saveLocal(event);
 
+  }
+
+  onUpdateStatusItem = (id) => {
+    const index = this.state.tasks.findIndex(item => +item.id === id);
+    if (index > -1) {
+      this.state.tasks[index].status = !this.state.tasks[index].status;
+      this.setState({
+        tasks: this.state.tasks
+      });
+      localStorage.setItem('tasks', JSON.stringify(this.state.tasks));
+    }
   }
 
   render() {
@@ -88,7 +98,9 @@ class App extends Component {
                 </button>
                 <Control/>
                 <div className="row mt-2">
-                  <TaskList tasks={tasks}/>
+                  <TaskList
+                      outIdTaskItem={this.onUpdateStatusItem}
+                      tasks={tasks}/>
                 </div>
               </div>
           </div>
