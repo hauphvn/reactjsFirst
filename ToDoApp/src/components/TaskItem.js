@@ -2,7 +2,11 @@ import {Component} from "react";
 
 class TaskItem extends Component {
     onChosen = (event) => {
-        this.props.outStatusTaskItem(this.props.id);
+        const objEvent = {
+            id: this.props.id,
+            method: event.target.dataset.method
+        }
+        this.props.outStatusTaskItem(objEvent);
     }
 
     render() {
@@ -13,6 +17,7 @@ class TaskItem extends Component {
                 <td>{name}</td>
                 <td>
                     <div
+                        data-method = "status"
                         onClick={this.onChosen}
                         className={status
                             ? "btn-status-item badge bg-danger text-wrap"
@@ -24,12 +29,18 @@ class TaskItem extends Component {
                 </td>
                 <td>
                     <div
-                        className={"badge bg-warning text-wrap"}
-                        style={{color: "black", marginRight: "4px"}}
+                        onClick={this.onChosen}
+                        data-method = "update"
+                        className={"btn-item badge bg-warning text-wrap"}
+                        style={{marginRight: "4px"}}
                     >
                         Sửa
                     </div>
-                    <div className={"badge bg-danger text-wrap"}>Xóa</div>
+                    <div
+                        onClick={this.onChosen}
+                        data-method = "delete"
+                        className={"btn-item badge bg-danger text-wrap"}>
+                        Xóa</div>
                 </td>
         </tr>
     );

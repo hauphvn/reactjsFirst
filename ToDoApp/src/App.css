@@ -50,4 +50,10 @@
 .btn-status-item{
   cursor: pointer;
   width: 100px;
+  color: white;
+}
+
+.btn-item{
+  cursor: pointer;
+  color:white;
 }

@@ -30,6 +30,25 @@ class TaskList extends Component {
             </tr>
           </thead>
           <tbody>
+          <tr>
+            <td></td>
+            <td>
+              <input
+                  placeholder={'Tìm công việc...'}
+                  className={'form-control'}
+                  type="text"/>
+            </td>
+            <td>
+              <select
+                  name="filterStatus"
+                  className={'form-control'}>
+                <option value="{-1}">Tấc cả</option>
+                <option value="{0}">Ẩn</option>
+                <option value="{1}">Kích hoạt</option>
+              </select>
+            </td>
+            <td>  </td>
+          </tr>
           {listItems}
           </tbody>
         </table>
