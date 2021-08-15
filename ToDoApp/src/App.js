@@ -3,6 +3,7 @@ import {Component} from "react";
 import TaskForm from "./components/TaskForm";
 import Control from "./components/Control";
 import TaskList from "./components/TaskList";
+import demoRedux from "./demoRedux/demoRedux";
 
 class App extends Component {
   constructor() {
