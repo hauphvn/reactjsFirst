@@ -1,23 +1,9 @@
 import { Component } from "react";
 import TaskItem from "./TaskItem";
+import {connect} from "react-redux";
+
 class TaskList extends Component {
-  onUpdateStatusItem = (event) =>{
-    this.props.outIdTaskItem(event);
-  }
   render() {
-    let { tasks } = this.props;
-    let listItems = [];
-    if(tasks){
-      listItems = tasks.map((item, index) => {
-          return <TaskItem
-              id = {item.id}
-              key = {index}
-              outStatusTaskItem = {this.onUpdateStatusItem}
-              status = {item.status}
-              no={index + 1}
-              name={item.name} />;
-      });
-    }
     return (
       <div className="col-sm-12">
         <table className={"table table-striped"}>
@@ -49,7 +35,6 @@ class TaskList extends Component {
             </td>
             <td>  </td>
           </tr>
-          {listItems}
           </tbody>
         </table>
       </div>
@@ -57,4 +42,9 @@ class TaskList extends Component {
   }
 }
 
-export default TaskList;
+const mapStateToProps = (state) =>{
+  return {
+    tasks: state.tasks
+  };
+};
+export default connect(mapStateToProps, null)(TaskList);
