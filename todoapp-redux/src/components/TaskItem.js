@@ -1,19 +1,20 @@
 import {Component} from "react";
+import {connect} from "react-redux";
 
 class TaskItem extends Component {
     render() {
         return (
             <tr>
-                <th scope={"row"}>1</th>
-                <td>Name</td>
+                <th scope={"row"}>{this.props.no}</th>
+                <td>{this.props.name}</td>
                 <td>
                     <div
                         data-method = "status"
-                        className={true
+                        className={this.props.status === "1"
                             ? "btn-status-item badge bg-danger text-wrap"
                             : " btn-status-item badge bg-info text-wrap"}>
                 <span>
-                    {true ? "Kích hoạt" : "Ẩn"}
+                    {this.props.status === "1" ? "Kích hoạt" : "Ẩn"}
                 </span>
                     </div>
                 </td>
@@ -34,5 +35,4 @@ class TaskItem extends Component {
     );
   }
 }
-
 export default TaskItem;

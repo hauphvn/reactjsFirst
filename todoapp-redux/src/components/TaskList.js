@@ -1,23 +1,35 @@
-import { Component } from "react";
+import {Component} from "react";
 import TaskItem from "./TaskItem";
 import {connect} from "react-redux";
 
 class TaskList extends Component {
   render() {
+    let {tasks} = this.props;
+    let listItems = [];
+    if (tasks) {
+      listItems = tasks.map(item => {
+        return <TaskItem
+            key={item.id}
+            no={item.id}
+            name={item.name}
+            status={item.status}
+        />
+      })
+    }
     return (
-      <div className="col-sm-12">
-        <table className={"table table-striped"}>
-          <thead>
+        <div className="col-sm-12">
+          <table className={"table table-striped"}>
+            <thead>
             <tr>
               <th scope={"col"}>STT</th>
               <th scope={"col"}>Tên</th>
               <th scope={"col"}>Trạng thái</th>
               <th scope={"col"}>Hành Động</th>
             </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td></td>
+            </thead>
+            <tbody>
+            <tr>
+              <td></td>
             <td>
               <input
                   placeholder={'Tìm công việc...'}
@@ -35,6 +47,7 @@ class TaskList extends Component {
             </td>
             <td>  </td>
           </tr>
+            {listItems}
           </tbody>
         </table>
       </div>
